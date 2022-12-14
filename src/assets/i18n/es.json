@@ -1,0 +1,15 @@
+{
+    "title": "Prueba técnica",
+    "email": "Email",
+    "password": "Constraseña",
+    "rememberPassword": "Recordar",
+    "signIn": "Acceder",
+    "emailRequired": "Por favor, indique el email.",
+    "emailPattern": "Email no válido.",
+    "passwordRequired": "Por favor, indique la contraseña.",
+    "passwordMinlength": "La contraseña debe contener al menos 5 caracteres.",
+    "footerTitle": "Regístrate",
+    "loginOK": "Se ha realizado el login.",
+    "passwordSaved": "Contraseña guardada",
+    "accept": "Aceptar"
+}

@@ -1,0 +1,40 @@
+<ion-content fullscreen class="content-login">
+  <div class="logoMobile">
+    <app-logo-login></app-logo-login>
+  </div>
+  <ion-grid class="container-login">
+    <div class="logoDesktop">
+      <app-logo-login [title]="es.title"></app-logo-login>
+    </div>
+    <form [formGroup]="formLogin" (ngSubmit)="doLogin()">
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-icon name="person-outline" slot="start" class="icon-login"></ion-icon>
+            <ion-input type="email" placeholder="{{es.email}}" formControlName="email" data-testid="email"></ion-input>
+            <ion-note slot="error" data-testid="errorEmail">{{ fieldValidator('email')}}</ion-note>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="lock-closed-outline" slot="start" class="icon-login"></ion-icon>
+            <ion-input type="password" placeholder="{{es.password}}" formControlName="password" data-testid="password"></ion-input>
+            <ion-note slot="error" data-testid="errorPassword">{{ fieldValidator('password')}}</ion-note>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label>{{es.rememberPassword}}</ion-label>
+            <ion-toggle slot="end" formControlName="rememberPassword" data-testid="rememberPassword"></ion-toggle>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="row-button">
+        <ion-col>
+          <ion-button type="submit" fill="solid" class="boton-login" data-testid="submit">{{es.signIn}}</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+
+</ion-content>
+<app-footer [description]="es.footerTitle"></app-footer>
